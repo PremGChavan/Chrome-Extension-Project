@@ -1,0 +1,67 @@
+@keyframes stretch {
+    0% {
+        background-color: turquoise;
+        transform: scale(1);
+    }
+    90% {
+        background-color: turquoise;
+        transform: scale(1);
+    }
+    100% {
+        background-color: teal;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes fast-stretch {
+    0% {
+        background-color: turquoise;
+        border-color: #000;
+        transform: scale(1);
+    }
+    100% {
+        background-color: teal;
+        border-color: gray;
+        transform: scale(1.4);
+    }
+}
+
+
+button#btnBQ {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 9999;
+
+    height: 40px;
+    width: 40px;
+
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: turquoise;
+
+    /* Animation properties */
+    animation-name: stretch;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+#btnBQ:hover {
+    /* transform: scale(1.1); */
+    background-color: teal;
+    border-color: gray;
+    animation: none; 
+    cursor: pointer;    
+}
+
+#btnBQ[listening] {
+    animation-name: fast-stretch;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
