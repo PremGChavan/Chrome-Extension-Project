@@ -46,7 +46,6 @@ function listenUser() {
             content: transcript,
         });
         myPopup.show();
-        // console.log("this is what u said:" + transcript);
     }
 }
 
